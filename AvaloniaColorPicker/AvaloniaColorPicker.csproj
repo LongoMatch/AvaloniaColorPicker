@@ -44,6 +44,7 @@
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.0.0-preview8" />
     <PackageReference Include="System.Collections.Immutable" Version="6.0.0" />
+    <PackageReference Include="System.Reactive.Linq" Version="6.0.0-preview.16" />
   </ItemGroup>
 
 </Project>
