@@ -34,7 +34,7 @@ namespace AvaloniaColorPicker
     /// <summary>
     /// A control that enables the user to select a <see cref="Avalonia.Media.Color"/>.
     /// </summary>
-    public class ColorPicker : UserControl, IColorPicker
+    public partial class ColorPicker : UserControl, IColorPicker
     {
         /// <summary>
         /// Set this property to <see langword="true"/> before creating any object from this library to disable all transitions.
@@ -529,7 +529,7 @@ namespace AvaloniaColorPicker
                 }
             }
 
-            this.FindControl<ToggleButton>("Dim1Toggle").Checked += (s, e) =>
+            this.FindControl<ToggleButton>("Dim1Toggle").IsCheckedChanged += (s, e) =>
             {
                 this.FindControl<ToggleButton>("Dim2Toggle").IsChecked = false;
                 this.FindControl<ToggleButton>("Dim3Toggle").IsChecked = false;
@@ -556,7 +556,7 @@ namespace AvaloniaColorPicker
                 BuildColorInterface(true);
             };
 
-            this.FindControl<ToggleButton>("Dim2Toggle").Checked += (s, e) =>
+            this.FindControl<ToggleButton>("Dim2Toggle").IsCheckedChanged += (s, e) =>
             {
                 this.FindControl<ToggleButton>("Dim1Toggle").IsChecked = false;
                 this.FindControl<ToggleButton>("Dim3Toggle").IsChecked = false;
@@ -585,7 +585,7 @@ namespace AvaloniaColorPicker
             };
 
 
-            this.FindControl<ToggleButton>("Dim3Toggle").Checked += (s, e) =>
+            this.FindControl<ToggleButton>("Dim3Toggle").IsCheckedChanged += (s, e) =>
             {
                 this.FindControl<ToggleButton>("Dim1Toggle").IsChecked = false;
                 this.FindControl<ToggleButton>("Dim2Toggle").IsChecked = false;

@@ -129,13 +129,13 @@ namespace AvaloniaColorPicker
             }
 
             this.ColorComponent = ColorPicker.ColorComponents.R;
-            
+
             Color newValue = Color.FromRgb(R, G, B);
 
             if (this.RGB != newValue)
             {
                 this.RGB = newValue;
-                
+
                 if (instantTransition)
                 {
                     Update(ColorPicker.ColorSpaces.RGB);
